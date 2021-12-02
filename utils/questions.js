@@ -57,7 +57,7 @@ const addEmployee = [
     }
 ];
 
-const updateEmployeeRole = [
+const updateRole = [
     {
         type: "input",
         name: "test",
@@ -78,4 +78,4 @@ const updateEmployeeRole = [
     }
 ];
 
-module.exports = {menu, addDepartment, addRole, addEmployee, updateEmployeeRole};
+module.exports = {menu, addDepartment, addRole, addEmployee, updateRole};
