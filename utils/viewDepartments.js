@@ -1,15 +1,5 @@
-const db = require('../config/connection.js');
-const cTable = require('console.table');
-
-async function viewTable(sqlQuery, tableName) {
-  db.query(sqlQuery, (err, rows) => {
-    const table = cTable.getTable(rows);
-    console.log("\n", `All ${tableName}`, "\n", table, "\n");
-  });
-  
-}
-
-// function that views all departments and department_id's
+const viewTable = require('./viewTable');
+// function that views all departments
 module.exports = () => {
     const sqlQuery = `SELECT name AS 'department', id FROM departments`;
     const tableName = "Departments";
