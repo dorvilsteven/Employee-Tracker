@@ -25,10 +25,9 @@ const addRole = [
         message: "What is the role's salary?",
     },
     {
-        type: "list",
-        name: "department",
-        message: "Select the department which the role belongs to: ",
-        choices: [""],
+        type: "number",
+        name: "department_id", 
+        message: "What is the department_id for the role",
     }
 ];
 
