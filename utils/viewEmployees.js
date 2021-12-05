@@ -1,4 +1,5 @@
 const viewTable = require('./viewTable');
+
 // function that views all departments
 module.exports = () => {
     const sqlQuery = `SELECT 

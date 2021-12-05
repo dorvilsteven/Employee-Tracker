@@ -9,10 +9,10 @@ module.exports = () => {
         const sqlQuery = "INSERT INTO departments (name) VALUES (?)";
 
         db.query(sqlQuery, departmentName, (err, results) => {
-        if (err) {
-            return console.error(err.message);
-        }
-        console.log("Number of rows successfully added: " + results.affectedRows);
+            if (err) {
+                return console.error(err.message);
+            }
+            console.log(`${results.affectedRows} row(s) of data added`);
         });
 
         viewDepartments();

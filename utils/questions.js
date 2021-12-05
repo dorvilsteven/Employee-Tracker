@@ -27,7 +27,7 @@ const addRole = [
     {
         type: "number",
         name: "department_id", 
-        message: "What is the department_id for the role",
+        message: "What is the department_id for the role?",
     }
 ];
 
@@ -35,24 +35,22 @@ const addEmployee = [
     {
         type: "input",
         name: "firstName",
-        message: "What is the new employee's first name?: ",
+        message: "What is the new employee's first name?",
     },
     {
         type: "input",
         name: "lastName",
-        message: "What is the new employee's last name?: ",
+        message: "What is the new employee's last name?",
     },
     {
-        type: "list",
-        name: "role",
-        message: "What role will the new employee have?: ",
-        choices: [""],
+        type: "number",
+        name: "role_id",
+        message: "What is the role_id for the employee?"
     },
     {
-        type: "list",
-        name: "manager",
-        message: "Who will the new employee report to?: ",
-        choices: ["none"],
+        type: "number",
+        name: "manager_id",
+        message: "What is the manager_id for the manger of this employee?"
     }
 ];
 
