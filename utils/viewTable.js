@@ -1,5 +1,7 @@
+const employeeTracker = require('./employeeTracker');
 const db = require('../config/connection.js');
 const cTable = require('console.table');
+
 
 module.exports = (sqlQuery, tableName) => {
   db.query(sqlQuery, (err, rows) => {
