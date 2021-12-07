@@ -31,7 +31,6 @@ module.exports = () => {
                     addDepartment();
                     break;
                 case menu[4]: // add a role
-                    viewDepartments();
                     addRole();
                     break;
                 case menu[5]: // add an employee

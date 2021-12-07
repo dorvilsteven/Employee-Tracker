@@ -2,8 +2,10 @@ const db = require('../config/connection.js');
 const Inquirer = require('inquirer');
 const questions = require('./questions');
 const viewRoles = require('./viewRoles');
+const viewDepartments = require('./viewDepartments');
 
 module.exports = () => {
+    viewDepartments();
     Inquirer.prompt(questions.addRole)
     .then(({ title, salary, department_id }) => {
         let role = [title, salary, department_id];

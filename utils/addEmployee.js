@@ -7,9 +7,9 @@ const viewEmployees = require('./viewEmployees');
 module.exports = () => {
     Inquirer.prompt(questions.addEmployee)
     .then(({firstName, lastName, role_id, manager_id}) => {
-        let employee = [firstName, lastName, role_id, manager_id];
+        const employee = [firstName, lastName, role_id, manager_id];
 
-        const sqlInsert = "INSERT INTO employees (firstName, lastName, role_id, manager_id) VALUES ?";
+        const sqlInsert = "INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ?";
 
         db.query(sqlInsert, [[employee]], (err, results) => {
             if (err) {
