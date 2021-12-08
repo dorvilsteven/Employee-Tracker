@@ -5,6 +5,8 @@ const viewEmployees = require('./viewEmployees');
 
 
 module.exports = () => {
+    viewRoles();
+    viewEmployees();
     Inquirer.prompt(questions.addEmployee)
     .then(({firstName, lastName, role_id, manager_id}) => {
         const employee = [firstName, lastName, role_id, manager_id];

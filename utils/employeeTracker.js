@@ -34,8 +34,6 @@ module.exports = () => {
                     addRole();
                     break;
                 case menu[5]: // add an employee
-                    viewRoles();
-                    viewEmployees();
                     addEmployee();
                     break;
                 case menu[6]: // update an employee role
