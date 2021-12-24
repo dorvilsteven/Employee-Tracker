@@ -1,4 +1,3 @@
-const employeeTracker = require('./employeeTracker');
 const db = require('../config/connection.js');
 const cTable = require('console.table');
 
@@ -11,5 +10,4 @@ module.exports = (sqlQuery, tableName) => {
     const table = cTable.getTable(rows);
     console.log(`\n All ${tableName} \n ${table}`);
   });
-  employeeTracker;
-}
+};

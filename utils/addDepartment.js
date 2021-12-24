@@ -5,16 +5,21 @@ const viewDepartments = require('./viewDepartments');
 
 module.exports = () => {
     Inquirer.prompt(questions.addDepartment)
-    .then(({departmentName}) => {
-        const sqlQuery = "INSERT INTO departments (name) VALUES (?)";
+        .then(({departmentName}) => {
+            const sqlQuery = "INSERT INTO departments (name) VALUES (?)";
 
-        db.query(sqlQuery, departmentName, (err, results) => {
-            if (err) {
-                return console.error(err.message);
+            db.query(sqlQuery, departmentName, (err, results) => {
+                if (err) {
+                    return console.error(err.message);
+                }
+                console.log(`${results.affectedRows} row(s) of data added`);
+            });
+
+            viewDepartments();
+        })
+        .catch((error) => {
+            if (error) {
+                console.log(error);
             }
-            console.log(`${results.affectedRows} row(s) of data added`);
         });
-
-        viewDepartments();
-    });
 };

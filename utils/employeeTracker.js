@@ -1,7 +1,5 @@
 // required packages
 const Inquirer = require('inquirer');
-//database
-const db = require('../config/connection');
 // required uitilites 
 const addDepartment = require('./addDepartment');
 const addEmployee = require('./addEmployee');
@@ -50,5 +48,4 @@ module.exports = () => {
                 console.log(error);
             }
         });
-    return;
 };
