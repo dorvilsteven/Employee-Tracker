@@ -56,22 +56,14 @@ const addEmployee = [
 
 const updateRole = [
     {
-        type: "input",
-        name: "test",
-        message: "",
-    },
-
-    {
-        type: "list",
-        name: "employeeToUpdate",
-        message: "Select the employee you'd like to modify: ",
-        choices: [""],
+        type: "number",
+        name: "employee_id",
+        message: "Select the employee you'd like to modify by their id: "
     },
     {
-        type: "list",
-        name: "role",
-        message: "Select the new role of the employee: ",
-        choices: [""],
+        type: "number",
+        name: "role_id",
+        message: "Select the new role of the employee by id: "
     }
 ];
 

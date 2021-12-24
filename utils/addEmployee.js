@@ -1,12 +1,12 @@
 const db = require('../config/connection.js');
 const Inquirer = require('inquirer');
 const questions = require('./questions');
+const viewRoles = require('./viewRoles');
 const viewEmployees = require('./viewEmployees');
 
 
 module.exports = () => {
     viewRoles();
-    viewEmployees();
     Inquirer.prompt(questions.addEmployee)
     .then(({firstName, lastName, role_id, manager_id}) => {
         const employee = [firstName, lastName, role_id, manager_id];
